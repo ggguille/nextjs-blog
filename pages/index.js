@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import Date from '../components/date'
 import utilStyles from '../styles/utils.module.css'
 
 import { getSortedPostsData } from '../lib/posts'
@@ -35,7 +36,9 @@ export default function Home({ allPostsData }) {
               <br />
               {id}
               <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>
