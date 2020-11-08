@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
             <li className={utilStyles.listItem} key={id}>
               {title}
               <br />
-              {id}
+              <a href={`/posts/${id}`}>{id}</a>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
